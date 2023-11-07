@@ -48,10 +48,59 @@
 //   dynamic name3; // 조심스럽게 사용해야하는 dynamic타입은
 //   name3 = "hello world";
 //   name3 = 12121212;
-//   name3 = true; // 위와 같이 어느 타입으로도 사용할 수 있고 
+//   name3 = true; // 위와 같이 어느 타입으로도 사용할 수 있고
 
 //   if(name3 is String){
-//     // 이런식으로 사용한다면 String으로 사용할 수 있는 것들에 접근 가능 
+//     // 이런식으로 사용한다면 String으로 사용할 수 있는 것들에 접근 가능
 //   }
-  
+
 // }
+
+// void main() {
+//   String str = "str"; //String
+//   bool alive = true; // boolean
+//   int age = 10; //integer
+//   double money = 69.99; //double
+
+//   num x = 10; // num이 integer의 부모 클래스
+//   x = 10.11; // num이 double의 부모 클래스
+// }
+
+void main() {
+  // list
+  var list = [
+    1,
+    2,
+    3,
+    4,
+  ]; // list (리스트를 사용할때 마무리를 쉼표로 마무리하면 위와 같이 보기 쉬워진다)
+  List<int> numbers = [1, 2, 3, 4]; // 이렇게도 가능! 하지만 되도록 var사용할것
+
+  list.add(5); // 이것은 list라는 리스트에 5라는 값을 포함 시키는것으로 List는 integer이니까 숫자는 가능
+  //list.add('hello'); 하지만 다른 타입은 불가능!!
+
+  list.first; // 이것은 list라는 리스트의 첫번째 값을 가져온다!
+  list.last; // 이것은 list라는 리스트의 마지막 값을 가져온다!
+
+  //ex)
+  print(list.first);
+  print(list.last);
+
+  // 출력하면 1 5 가 나온다1!!
+  // 이외에도 여러가지 메소드들이 있으니 찾아보시길!! (다 사용 못합니다 걱정 마시길)
+
+  //collection if
+  var giveMeFive = true;
+  var number = [
+    1,
+    2,
+    3,
+    4,
+    if (giveMeFive) 5, // collection if (만약 giveMeFive 변수가 true이면 5를 추가한다)
+  ];
+
+  // 아래의 코드와 똑같은 내용이지만 더 쉽다
+  // if (giveMeFive) {
+  //   number.add(5);
+  // }
+}
