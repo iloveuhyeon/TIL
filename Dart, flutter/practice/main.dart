@@ -66,41 +66,153 @@
 //   x = 10.11; // num이 double의 부모 클래스
 // }
 
-void main() {
-  // list
-  var list = [
-    1,
-    2,
-    3,
-    4,
-  ]; // list (리스트를 사용할때 마무리를 쉼표로 마무리하면 위와 같이 보기 쉬워진다)
-  List<int> numbers = [1, 2, 3, 4]; // 이렇게도 가능! 하지만 되도록 var사용할것
+// void main() {
+//   // list
+//   var list = [
+//     1,
+//     2,
+//     3,
+//     4,
+//   ]; // list (리스트를 사용할때 마무리를 쉼표로 마무리하면 위와 같이 보기 쉬워진다)
+//   List<int> numbers = [1, 2, 3, 4]; // 이렇게도 가능! 하지만 되도록 var사용할것
 
-  list.add(5); // 이것은 list라는 리스트에 5라는 값을 포함 시키는것으로 List는 integer이니까 숫자는 가능
-  //list.add('hello'); 하지만 다른 타입은 불가능!!
+//   list.add(5); // 이것은 list라는 리스트에 5라는 값을 포함 시키는것으로 List는 integer이니까 숫자는 가능
+//   //list.add('hello'); 하지만 다른 타입은 불가능!!
 
-  list.first; // 이것은 list라는 리스트의 첫번째 값을 가져온다!
-  list.last; // 이것은 list라는 리스트의 마지막 값을 가져온다!
+//   list.first; // 이것은 list라는 리스트의 첫번째 값을 가져온다!
+//   list.last; // 이것은 list라는 리스트의 마지막 값을 가져온다!
 
-  //ex)
-  print(list.first);
-  print(list.last);
+//   //ex)
+//   print(list.first);
+//   print(list.last);
 
-  // 출력하면 1 5 가 나온다1!!
-  // 이외에도 여러가지 메소드들이 있으니 찾아보시길!! (다 사용 못합니다 걱정 마시길)
+//   // 출력하면 1 5 가 나온다1!!
+//   // 이외에도 여러가지 메소드들이 있으니 찾아보시길!! (다 사용 못합니다 걱정 마시길)
 
-  //collection if
-  var giveMeFive = true;
-  var number = [
-    1,
-    2,
-    3,
-    4,
-    if (giveMeFive) 5, // collection if (만약 giveMeFive 변수가 true이면 5를 추가한다)
-  ];
+//   //collection if
+//   var giveMeFive = true;
+//   var number = [
+//     1,
+//     2,
+//     3,
+//     4,
+//     if (giveMeFive) 5, // collection if (만약 giveMeFive 변수가 true이면 5를 추가한다)
+//   ];
 
-  // 아래의 코드와 똑같은 내용이지만 더 쉽다
-  // if (giveMeFive) {
-  //   number.add(5);
-  // }
-}
+//   // 아래의 코드와 똑같은 내용이지만 더 쉽다
+//   // if (giveMeFive) {
+//   //   number.add(5);
+//   // }
+
+// }
+
+// void main() {
+//   var name = 'nico';
+//   var gretting = 'hello my name is $name, nice meet you';
+
+//   print(gretting);
+
+//   var age = 10;
+//   var gretting2 = 'hello my name is $name and i`m ${age + 2} years ago';
+
+//   print(gretting2);
+// }
+
+// void main() {
+//   //collection for
+//   var oldFriends = [
+//     'nico',
+//     'lynn',
+//   ];
+
+//   var newFriends = [
+//     'lewis',
+//     'ralph',
+//     'darren',
+//     for (var firend in oldFriends) "My Favorite $firend", // collection for (old Frineds라는 변수에 있는 친구들을 newFriends에 넣을때 myFavorite을 추가해서 넣어준다)
+//   ];
+
+//   //아래의 코드와 같은 내용을 쉽게 축약해서 정리한 것이 collection for 이다
+//   // for (var friend in oldFriends) {
+//   //   newFriends.add('My favorite $friend');
+//   // }
+//   print(newFriends);
+// }
+
+// void main() {
+//   //Maps
+//   var human = {
+//     'name': 'yuhyeon',
+//     'age': '17',
+//     'xp': '99.99',
+//     'superpower': false,
+//   }; // 이것은 maps 이다 이 maps에는 value : key 이런식인데 value라는 값에 key를 넣는 개념이라고 보면 된다
+//   // 위의 코드를이렇게도 사용 할 수 있다
+
+//   Map<String, Object> human2 = {
+//     'name': 'yuhyeon',
+//     'age': '17',
+//     'xp': '99.99',
+//     'superpower': false,
+//   };
+
+//   //여기서 알아두면 좋은것
+//   //object라는 타입은 무엇일까 ?? : object는 모든 타입의 부모라고 보면 된다 한마디로 저 object는 모든 자료형이 될 수 있다 약간 var과 비슷하다고 보면 편하다
+
+//   // 그리고 maps에는 list도 사용이 가능하다
+//   // 아래 봐보자
+
+//   Map<List<int>,Object> player = {
+//     [1, 2, 3, 4, 5] : 'human',
+//     [6,7,8,9,10] : 'robot',
+//   };
+
+//   //이런식으로 사용이 가능하다
+
+//   // map에서도 list를 사용했는데 list에서도 map을 사용해보자
+//   // 아래를 봐보자
+
+//   List<Map<String, Object>> players =[
+//     {
+//       'name' : 'nico',
+//       'xp' : 199999.999999,
+//     },
+//     {
+//       'name' : 'nico',
+//       'xp' : 199999.999999,
+//     },
+//     {
+//       'name' : 'nico',
+//       'xp' : 199999.999999,
+//     },
+//     {
+//       'name' : 'nico',
+//       'xp' : 199999.999999,
+//     }
+//   ];
+
+//   //위와 같이 만들 수 있다.
+// }
+
+// void main() {
+//   //Sets
+//   var numbers = {1, 2, 3, 4}; // 이것이 sets이다 이 sets는 list와는 비슷하지만 특이한 점이 있다
+
+//   numbers.add(1); // 1을 추가
+//   numbers.add(1); // 1을 추가
+//   numbers.add(1); // 1을 추가
+
+//   print(numbers); // 이것을 출력하면 {1,2,3,4} 가 출력된다.
+
+//   // 자 다시 돌아가서 일반적인 list를 저렇게 해보자
+//   var numbers2 = [1, 2, 3, 4];
+
+//   numbers2.add(1); // 1을 추가
+//   numbers2.add(1); // 1을 추가
+//   numbers2.add(1); // 1을 추가
+
+//   print(numbers2); // 이것을 출력하면 [1,2,3,4,1,1,1]이 출력된다 
+//   // (여기서 list와 sets의 차이 하나가 더 있다면 list는 대괄호, sets는 중괄호이다)
+//   // sets의 사용은 요소가 항상 하나만 있어냐 한다면 사용하기 좋은것이다 그리하여 sets와 list의 사용을 선택하는것은
+//   // 본인의 몫이니 알아서 잘 선택해서 하시길 바랍니다.
+// }
