@@ -256,3 +256,14 @@
 
 //   print(sayHello(name: 'yuhyeon', age: 17, country: 'korea'));
 // }
+
+// String sayHello(String name, int age, [String? country]) {
+//   return "hello $name, you are $age, and you come $country";
+// }
+
+// void main() {
+//   print(sayHello(
+//     'yuhyeon',
+//     17,
+//   ));
+// }
