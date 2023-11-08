@@ -239,3 +239,20 @@
 //       'yuhyeon')); // 이렇게 다른 타입 형식의 함수를 호출할땐 return이 String형식의 문장이기 때문에 return값을 출력하기 위해서 print를 사용했다
 //   print(sayhello3('yuhyeon'));
 // }
+
+// String sayHello({
+//   required String name,
+//   required int age,
+//   required String country,
+// }) =>
+//     "hello $name, you are $age, and you come $country";
+
+// void main() {
+//   // print(sayHello('yuhyeon', 17, 'Korea'));
+//   // 우리가 일방적으로 함수를 호출할 때에는 이렇게 사용한다
+//   // 하지만 이런식으로 함수를 호출할때 파라미터의 순서를 지켜서 적여야하는데
+//   // 그러기에는 자주 까먹을 수 있다 그래서 있는것이 Named Parameters인데
+//   // 이 기
+
+//   print(sayHello(name: 'yuhyeon', age: 17, country: 'korea'));
+// }
