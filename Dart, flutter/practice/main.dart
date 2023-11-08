@@ -267,3 +267,18 @@
 //     17,
 //   ));
 // }
+
+// String capName(String? name) => name?.toUpperCase() ?? '익명';
+
+// void main() {
+//   print(capName('Parkyuhyeon'));
+//   print(capName(null));
+// }
+
+// void main() {
+//   String? name;
+//   name ??= 'park';
+//   name ??= 'yuhyeon';
+
+//   print(name);
+// }
