@@ -211,8 +211,31 @@
 //   numbers2.add(1); // 1을 추가
 //   numbers2.add(1); // 1을 추가
 
-//   print(numbers2); // 이것을 출력하면 [1,2,3,4,1,1,1]이 출력된다 
+//   print(numbers2); // 이것을 출력하면 [1,2,3,4,1,1,1]이 출력된다
 //   // (여기서 list와 sets의 차이 하나가 더 있다면 list는 대괄호, sets는 중괄호이다)
 //   // sets의 사용은 요소가 항상 하나만 있어냐 한다면 사용하기 좋은것이다 그리하여 sets와 list의 사용을 선택하는것은
 //   // 본인의 몫이니 알아서 잘 선택해서 하시길 바랍니다.
+// }
+
+// void sayHello(String name) {
+//   // 여기서 void는 이 함수에서 return은 하지 않는다는건데
+//   print("Hello $name nice to meet you!");
+// } // 만약 return을 하려면
+
+// String sayhello2(String name) {
+//   //이런식으로 하면 되는데 여기서 void대신 String을 쓴 이유는 return값이 String타입이기 때문이다 만약 당신이 int타입을 return 한다면 String이 아닌 int가 void 대신 와야한다
+//   return "Hello $name nice to meet you!";
+// } //그리고 위의 방식으로 호출하자마자 바로 return을 하고 함수가 한줄짜리라고 한다면 이 방식 말고도 fat arrow syntax라는 방식으로 할 수 있다
+
+// //fat arrow syntax
+// String sayhello3(String name) => "Hello $name nice to meet you!";
+// //fat arraw syntax의 다른 예제
+// num plus(num x, num y) => x + y;
+
+// void main() {
+//   sayHello(
+//       'yuhyeon'); // void 형식의 sayhello함수는 호출만 하면 그 함수 안에 print가 있기때문에 따로 print를 안해줘도 되지만
+//   print(sayhello2(
+//       'yuhyeon')); // 이렇게 다른 타입 형식의 함수를 호출할땐 return이 String형식의 문장이기 때문에 return값을 출력하기 위해서 print를 사용했다
+//   print(sayhello3('yuhyeon'));
 // }
