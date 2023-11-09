@@ -294,3 +294,42 @@
 // void main() {
 //   print(hi([1, 2, 3]));
 // }
+
+//--------------------------------
+
+// class Player {
+//   final String name;
+//   int xp;
+//   String team;
+//   int age;
+
+//   Player(
+//       {required this.name,
+//       required this.xp,
+//       required this.team,
+//       required this.age}); // 생성자
+
+//   void sayhello() {
+//     print('hello $name!! your xp is $xp');
+//   }
+// }
+
+// void main() {
+//   var player = Player(  
+//     name: 'park',
+//     age: 10,
+//     xp: 1000,
+//     team: 'red',
+//   ); // player 인스턴스 호출, 아규먼트 작성
+
+//   player.sayhello(); // player의 property를 호출하고
+
+//   var player2 = Player(
+//     xp: 1500,
+//     name: 'yuhyeon',
+//     age: 15,
+//     team: 'blue',
+//   );
+
+//   player2.sayhello();
+// }
