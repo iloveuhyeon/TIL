@@ -282,3 +282,15 @@
 
 //   print(name);
 // }
+
+typedef typelist = List<int>;
+
+typelist hi(typelist name) {
+  var reverse = name.reversed;
+  print(reverse);
+  return reverse.toList();
+}
+
+void main() {
+  print(hi([1, 2, 3]));
+}
