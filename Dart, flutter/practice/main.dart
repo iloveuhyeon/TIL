@@ -314,13 +314,13 @@
 //   })  : this.name = name,
 //         this.age = age,
 //         this.xp = 1000,
-//         this.team = 'blue'; // named 생성자 
- 
+//         this.team = 'blue'; // named 생성자
+
 //   Player.createRedPlayer({
 //     required this.name,
 //     required this.age,
 //     this.xp = 1000,
-//     this.team = 'red',  
+//     this.team = 'red',
 //   }); // named Constructors parameters로 만든 named 생성자 다른 버전
 
 //   Player.createWhitePlayer(String name, int age)
@@ -358,3 +358,30 @@
 //   redplayer.sayhello();
 //   whiteplayer.sayhello();
 // }
+
+class Player {
+  String name;
+  String team;
+  int xp;
+
+  Player({required this.name, required this.team, required this.xp});
+
+  void sayhello() {
+    print('hello $name!! your xp is $xp, $team');
+  }
+}
+
+void main() {
+  Player nico = Player(
+    name: 'nico',
+    xp: 10000,
+    team: 'red',
+  );
+
+  print('hello world');
+
+  var potato = nico
+    ..name = 'alal'
+    ..xp = 120209
+    ..team = 'blue';
+}
