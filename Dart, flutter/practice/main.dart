@@ -295,41 +295,66 @@
 //   print(hi([1, 2, 3]));
 // }
 
-//--------------------------------
-
 // class Player {
 //   final String name;
 //   int xp;
 //   String team;
 //   int age;
 
-//   Player(
-//       {required this.name,
+//   Player({
+//       required this.name,
 //       required this.xp,
 //       required this.team,
-//       required this.age}); // 생성자
+//       required this.age
+//       }); // 일반적인 생성자
+
+//   Player.createBluePlayer({
+//     required String name,
+//     required int age,
+//   })  : this.name = name,
+//         this.age = age,
+//         this.xp = 1000,
+//         this.team = 'blue'; // named 생성자 
+ 
+//   Player.createRedPlayer({
+//     required this.name,
+//     required this.age,
+//     this.xp = 1000,
+//     this.team = 'red',  
+//   }); // named Constructors parameters로 만든 named 생성자 다른 버전
+
+//   Player.createWhitePlayer(String name, int age)
+//       : this.name = name,
+//         this.age = age,
+//         this.team = 'white',
+//         this.xp = 10; // positional Constructors parameters 로 만든 named 생성자
 
 //   void sayhello() {
-//     print('hello $name!! your xp is $xp');
+//     print('hello $name!! your xp is $xp, $team ,$age');
 //   }
 // }
 
 // void main() {
-//   var player = Player(  
+//   var player = Player(
 //     name: 'park',
 //     age: 10,
 //     xp: 1000,
 //     team: 'red',
 //   ); // player 인스턴스 호출, 아규먼트 작성
 
-//   player.sayhello(); // player의 property를 호출하고
-
-//   var player2 = Player(
-//     xp: 1500,
-//     name: 'yuhyeon',
-//     age: 15,
-//     team: 'blue',
+//   var blueplayer = Player.createBluePlayer(
+//     name: 'yu',
+//     age: 17,
 //   );
 
-//   player2.sayhello();
+//   var redplayer = Player.createRedPlayer(
+//     name: 'hyeon',
+//     age: 17,
+//   );
+
+//   var whiteplayer = Player.createWhitePlayer('kim', 17);
+
+//   blueplayer.sayhello();
+//   redplayer.sayhello();
+//   whiteplayer.sayhello();
 // }
