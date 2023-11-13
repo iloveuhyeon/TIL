@@ -359,29 +359,30 @@
 //   whiteplayer.sayhello();
 // }
 
-class Player {
-  String name;
-  String team;
-  int xp;
+// class Player {
+//   String name;
+//   String team;
+//   int xp;
 
-  Player({required this.name, required this.team, required this.xp});
+//   Player({required this.name, required this.team, required this.xp});
 
-  void sayhello() {
-    print('hello $name!! your xp is $xp, $team');
-  }
-}
+//   void sayhello() {
+//     print('hello $name!! your xp is $xp, $team');
+//   }
+// }
 
-void main() {
-  Player nico = Player(
-    name: 'nico',
-    xp: 10000,
-    team: 'red',
-  );
+// void main() {
+//   Player nico = Player(
+//     name: 'nico',
+//     xp: 10000,
+//     team: 'red',
+//   );
 
-  print('hello world');
+//   print('hello world');
 
-  var potato = nico
-    ..name = 'alal'
-    ..xp = 120209
-    ..team = 'blue';
-}
+//   var potato = nico
+//     ..name = 'alal'
+//     ..xp = 120209
+//     ..team = 'blue';
+// }
+
